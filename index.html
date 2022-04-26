@@ -69,7 +69,7 @@
     <div class="control-panel">
         <div class="date">
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date">
+            <input type="date" id="date" name="date" min='2014-01-01' max='2017-12-31' value="2014-01-01">
         </div>
         <div class="compossant">
             <label for="composant">Composant:</label>
@@ -93,14 +93,14 @@
     // [date (mois année),ndep,NO,O3,PM10]
 
     //tableau de coordonnées 
-    coordonnee = [[95, 49.0750704, 2.2098114],
-    [75, 48.8588897, 2.320041],
-    [92, 48.8401859, 2.19863],
-    [93, 48.9098125, 2.4528635],
-    [94, 48.7744893, 2.4543321],
-    [77, 48.6190207, 3.0418158],
-    [78, 48.6266667, 2.9333333],
-    [91, 48.5222222, 2.2430556]];
+    coordonnee = [[95, 49.0616, 2.1581],
+    [75, 48.8658, 2.3018],
+    [92, 48.8285, 2.2188],
+    [93, 48.9137, 2.4846],
+    [94, 48.7931, 2.4740],
+    [77, 48.8411, 2.9994],
+    [78, 48.7851, 1.8257],
+    [91, 48.4586, 2.1569]];
 
 
     date_dept_no3_o3_pm10 = [["01/01/2014", 75, 19, 27, 16],
@@ -11813,7 +11813,8 @@
     var heat_map_23a96e4a7e204b749e000ae23b8a722d = L.heatLayer(
         [coord],
         { "blur": 15, "gradient": { "0.0": "blue", "0.25": "cyan", "0.5": "lime", "0.75": "yellow", "1.0": "red" }, "maxZoom": 18, "minOpacity": 5, "radius": 5 }
-    ).addTo(map_8b7a479f4f9848f9aac4f00e578a03e6);
+        // 
+        ).addTo(map_8b7a479f4f9848f9aac4f00e578a03e6);
     
     
     
@@ -11915,7 +11916,7 @@
 y=[[48.8588897, 2.320041, 51],[48.6190207, 3.0418158, 51],[48.6266667, 2.9333333, 48]]
         var heat_map_23a96e4a7e204b749e000ae23b8a722d = L.heatLayer(
             coord,
-            { "blur": 15, "gradient": { "0.0": "blue", "0.6": "cyan", "0.7": "lime", "0.8": "yellow", "1.0": "red" }, "maxZoom": 18, "minOpacity": 0.5, "radius": 25 }
+            { "blur": 15, "gradient": { "0.0": "blue", "0.25": "cyan", "0.5": "lime", "0.75": "yellow", "1.0": "red" }, "maxZoom": 18, "minOpacity": 0.1,"maxOpacity": 0.2, "radius": 50 }
         ).addTo(map_8b7a479f4f9848f9aac4f00e578a03e6);
     }
 </script>
